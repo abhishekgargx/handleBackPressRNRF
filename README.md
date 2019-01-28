@@ -23,7 +23,10 @@ export default class App extends Component {
     BackHandler.removeEventListener('hardwareBackPress', this.onBackPress.bind(this));
     }
     
-  // you can call this method anywhere using import to perfrom custom ui navigation + while it handle hardware back btn press automatically  
+  // you can call this method anywhere like this 
+  //import App from "./index";
+  // let performBackPress = () => App.onBackPress();
+  //to perfrom custom ui navigation (eg. header btn for back press) and it handle hardware back btn press automatically  
   static onBackPress() {
         if (backButtonPressedOnceToExit) {
             BackAndroid.exitApp();
